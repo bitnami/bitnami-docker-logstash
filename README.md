@@ -140,6 +140,14 @@ You can override the default configuration for logstash by mounting your own con
 $ docker run -d --env LOGSTASH_CONF_FILENAME=my_config.conf -v /path/to/custom-conf-directory:/bitnami/logstash/config bitnami/logstash:latest
 ```
 
+## Additional command line options
+
+Using the `LOGSTASH_EXTRA_ARGS` environment variable if you want to specify some more command line options such as `pipeline.workers` and `pipeline.batch.size`.
+
+```console
+$ docker run -d --env LOGSTASH_EXTRA_ARGS=" -w 4 -b 4096" bitnami/logstash:latest
+```
+
 ## Using multiple pipelines
 
 You can use [multiple pipelines](https://www.elastic.co/guide/en/logstash/master/multiple-pipelines.html) by setting the `LOGSTASH_ENABLE_MULTIPLE_PIPELINES` environment variable to `true`.
