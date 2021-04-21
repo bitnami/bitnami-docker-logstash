@@ -142,7 +142,7 @@ $ docker run -d --env LOGSTASH_CONF_FILENAME=my_config.conf -v /path/to/custom-c
 
 ## Additional command line options
 
-Using the `LOGSTASH_EXTRA_ARGS` environment variable if you want to specify some more command line options such as `pipeline.workers` and `pipeline.batch.size`.
+In case you want to add extra flags to the Logstash command, use the LOGSTASH_EXTRA_ARGS variable. Example:
 
 ```console
 $ docker run -d --env LOGSTASH_EXTRA_ARGS=" -w 4 -b 4096" bitnami/logstash:latest
