@@ -145,7 +145,7 @@ $ docker run -d --env LOGSTASH_CONF_FILENAME=my_config.conf -v /path/to/custom-c
 In case you want to add extra flags to the Logstash command, use the LOGSTASH_EXTRA_ARGS variable. Example:
 
 ```console
-$ docker run -d --env LOGSTASH_EXTRA_ARGS=" -w 4 -b 4096" bitnami/logstash:latest
+$ docker run -d --env LOGSTASH_EXTRA_ARGS="-w 4 -b 4096" bitnami/logstash:latest
 ```
 
 ## Using multiple pipelines
